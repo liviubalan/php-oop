@@ -8,4 +8,4 @@ function add_five(&$value)
 
 $num = 2;
 add_five($num);
-echo $num;
+echo $num . "\n";

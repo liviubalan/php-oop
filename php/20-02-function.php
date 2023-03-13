@@ -3,7 +3,7 @@
 // Function Arguments
 function familyName($fname)
 {
-    echo "$fname Popescu.<br>";
+    echo "$fname Popescu.\n";
 }
 
 familyName("Ion");
