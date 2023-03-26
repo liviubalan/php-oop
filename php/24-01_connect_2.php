@@ -1,15 +1,15 @@
 <?php
 
-// MySQLi Procedural
-$servername = "localhost";
-$username = "username";
-$password = "password";
+// MySQLi Object-Oriented
+require 'include/db.php';
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = new mysqli($hostname, $username, $password, $database, $port);
 
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error . "\n");
 }
-echo "Connected successfully";
+echo "Connected successfully\n";
+
+$conn->close();

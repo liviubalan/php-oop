@@ -1,15 +1,15 @@
 <?php
 
-// PDO
-$servername = "localhost";
-$username = "username";
-$password = "password";
+// MySQLi Procedural
+require 'include/db.php';
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+// Create connection
+$conn = mysqli_connect($hostname, $username, $password, $database, $port);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error() . "\n");
 }
+echo "Connected successfully\n";
+
+mysqli_close($conn);
