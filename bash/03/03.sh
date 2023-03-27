@@ -48,5 +48,5 @@ php bin/console make:crud Project
 php composer.phar require form twig-bundle security-csrf annotations
 php bin/console make:crud Project
 
-/var/lib/php/session/
+chmod 777 /var/lib/php/session/
 
