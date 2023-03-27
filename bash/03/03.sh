@@ -42,3 +42,11 @@ php bin/console dbal:run-sql 'SELECT * FROM product'
 
 # See: https://symfony.com/doc/current/validation.html
 php composer.phar require symfony/validator
+
+# 4
+php bin/console make:crud Project
+php composer.phar require form twig-bundle security-csrf annotations
+php bin/console make:crud Project
+
+/var/lib/php/session/
+
