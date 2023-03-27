@@ -1,7 +1,0 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
-
-hello:
-    path: /hello
-    controller: App\Controller\WorkshopPhp::hello
